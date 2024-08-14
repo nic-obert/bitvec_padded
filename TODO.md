@@ -6,13 +6,13 @@ Project Description
 
 ### Todo
 
-- [ ] make into a crate  
-- [ ] add some comments  
-- [ ] write a good reamde  
+- [ ] write a good readme  
 
 ### In Progress
 
 
 ### Done ✓
 
+- [x] add some comments  
+- [x] make into a crate  
 

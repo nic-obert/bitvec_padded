@@ -2,5 +2,12 @@
 name = "bitvec_padded"
 version = "0.1.0"
 edition = "2021"
+license-file = "LICENSE"
+description = "Bit vector struct that includes byte padding for safe serialization and deserialization"
+readme = "README.md"
+authors = ["Nicholas Obert"]
+homepage = "https://github.com/nic-obert/bitvec_padded"
+repository = "https://github.com/nic-obert/bitvec_padded"
+
 
 [dependencies]
