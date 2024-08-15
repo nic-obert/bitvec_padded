@@ -1,6 +1,6 @@
 [package]
 name = "bitvec_padded"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 license-file = "LICENSE"
 description = "Bit vector struct that includes byte padding for safe serialization and deserialization"

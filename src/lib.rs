@@ -138,15 +138,13 @@ impl BitVec {
 
 
     /// Return a deserializable representation of `self`
-    pub fn serialize(&self) -> Box<[u8]> {
+    pub fn serialize(&self, buf: &mut Vec<u8>) {
         
-        let mut buf = Vec::with_capacity(1 + self.least_len_bytes());
+        buf.reserve(1 + self.least_len_bytes());
 
         buf.push(self.last_byte_padding);
 
         buf.extend_from_slice(&self.raw_data);
-
-        buf.into_boxed_slice()
     }
 
 
@@ -362,7 +360,8 @@ mod tests {
 
         let v = BitVec::from_bool_slice(&bools);
 
-        let ser = v.serialize();
+        let mut ser = Vec::new();
+        v.serialize(&mut ser);
 
         let des = BitVec::deserialize(&ser).unwrap();
 
